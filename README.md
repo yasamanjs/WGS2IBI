@@ -8,6 +8,8 @@ Designed for datasets such as the **TOPMed Freeze 8 and Freeze 9 cohorts**, this
 
 [Read the full study (link pending publication)]  
 
+![fig1](https://github.com/user-attachments/assets/26c19d09-ae10-44e0-a802-77193d927d67)
+
 ---
 
 ## Features  
