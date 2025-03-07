@@ -82,4 +82,4 @@ by **Yasaman J. Soofi, Jin Ren, Md. Asad Rahman, David Roberson, and Jinling Liu
 ---
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+
