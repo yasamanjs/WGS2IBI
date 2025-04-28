@@ -25,12 +25,14 @@ The workflow has been tested on large datasets, such as the **TOPMed Freeze 8 an
 ## Workflow Components
 - **Preprocessing Tool**:  
   `cwl/preprocessing.cwl` — Processes raw WGS VCF files using VCF2SNP, PLINK, and BCFtools.
-- **Population Analysis Tools**:  
-  `cwl/population_analysis.cwl` — Conducts Fisher's exact test and GDSearch for GWAS.
-- **Top-k Pool Extraction Scripts**:  
-  `scripts/initial_analysis.py`, `scripts/Confirm_topk_pool.py` — Selects top-ranked variants for downstream analysis.
-- **Individual-Level Analysis Tool**:  
-  `cwl/individual_analysis.cwl` — Performs IBI on top-k selected variants.
+- **Population-Level Analysis Tools**:  
+  `cwl/population_analysis_fisher.cwl` — Conducts Fisher's exact test for GWAS.  
+  `cwl/population_analysis_gdsearch.cwl` — Conducts GDSearch for GWAS.
+- **Top-k Variant Pool Extraction Scripts**:  
+  `scripts/initial_analysis.py` — Performs initial ranking analysis and generates the top-k variants pool.  
+  `scripts/Confirm_topk_pool.py` — Confirms and manages selection of top-k variants for downstream analysis.
+- **Individual-Level Analysis Tool (IBI)**:  
+  `cwl/individual_analysis_ibi.cwl` — Performs Individualized Bayesian Inference (IBI) on the selected top-k variant pool.
 
 ---
 
@@ -39,7 +41,9 @@ The workflow has been tested on large datasets, such as the **TOPMed Freeze 8 an
 - Achieved preprocessing costs of **$20.83** and individual-level analysis costs of **under $5** for cohorts like JHS (2,777 samples).
 - Demonstrated scalability across datasets such as JHS, WHI, MESA, FHS, and GENOA.
 
+
 ---
+
 
 ## Access Options
 
@@ -51,20 +55,44 @@ See the **Getting Started** section below for setup instructions.
 A public project hosting **WGS2IBI** is available on the Seven Bridges platform.  
 This provides the easiest way to run the workflow **without any installation**.  
 
+**Access the public project here:**  
+[https://sb.biodatacatalyst.nhlbi.nih.gov/projects/f8e1d6a6-6f2e-4fa7-aaa3-d63d663ef9e5/WGS2IBI](https://sb.biodatacatalyst.nhlbi.nih.gov/projects/f8e1d6a6-6f2e-4fa7-aaa3-d63d663ef9e5/WGS2IBI)  
+*(Example URL — replace with your actual project link if different.)*
+
+**Create a free Seven Bridges account here:**  
+[https://accounts.sb.biodatacatalyst.nhlbi.nih.gov/auth/login](https://accounts.sb.biodatacatalyst.nhlbi.nih.gov/auth/login)
+
+
 **Advantages:**
 - Fully set up and ready to use — no need to install CWL runners, Docker, or manage AWS instances.
-- Test anonymously: Seven Bridges agreed to support reviewer access without needing personal disclosure.
-- Free trial credits available:  
-  Simply email **support@sevenbridges.com** with the subject "Request for Trial Access to WGS2IBI Project."
+- After creating a Seven Bridges account, users can **anonymously copy and test** the public WGS2IBI project without needing to contact the authors.
+- Users can **review previously submitted jobs**, including job inputs, parameters, outputs, and runtime settings — making it easy to learn how the workflow operates.
+- A **sample dataset** from the **1000 Genomes Project benchmark data** is included in the public project for immediate testing.
+- Free trial credits available: Simply email **support@sevenbridges.com** with the subject "Request for Trial Access to WGS2IBI Project."
 
-**Instructions:**
-- Visit Seven Bridges platform.
-- Copy the public WGS2IBI project into your workspace.
-- Test with provided sample data or upload your own data.
-
-> Detailed instructions for accessing and using the Seven Bridges project are also provided in the [docs/sevenbridges_usage.md](docs/sevenbridges_usage.md) file.
 
 ---
+
+## Sample Data
+
+To facilitate testing and exploration of the WGS2IBI workflow, a **sample dataset** derived from the **1000 Genomes Project benchmark data** is provided.
+
+- The sample dataset includes a subset of variants.
+- It is designed for **benchmarking**, **demonstration**, and **exploration** of the tools' full capabilities without needing controlled-access data.
+- Available in both:
+  - The public project on Seven Bridges (pre-loaded and ready to use)
+  - The `/data` directory in this GitHub repository
+
+Researchers can **run the entire WGS2IBI workflow end-to-end** using this sample dataset to understand the preprocessing, population analysis, top-k variant extraction, and individualized Bayesian inference steps.
+
+> **Compatibility Note:**  
+> The WGS2IBI workflow is **fully compatible** with large-scale datasets from **TOPMed Freeze 8 and later cohorts**, including **FHS**, **JHS**, **MESA**, **GENOA**, and **WHI**.  
+> These cohorts can be accessed directly the Seven Bridges BioData Catalyst platform, eliminating the need to manually download and upload massive genomic files.
+
+> **Access Requirements:**  
+> Please note that **TOPMed datasets are controlled access** and require appropriate authorization (e.g., dbGaP approval).  
+> Therefore, to enable immediate testing without access restrictions, the 1000 Genomes sample data is provided.
+
 
 ## Getting Started (Manual Setup)
 
