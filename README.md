@@ -63,7 +63,7 @@ This provides the easiest way to run the workflow **without any installation**.
 
 **Access the public project here:**  
 [https://sb.biodatacatalyst.nhlbi.nih.gov/projects/f8e1d6a6-6f2e-4fa7-aaa3-d63d663ef9e5/WGS2IBI](https://platform.sb.biodatacatalyst.nhlbi.nih.gov/u/biodatacatalyst/WGS2IBI)  
-*(Example URL — replace with your actual project link if different.)*
+*(Example URL — replace with your actual project link later.)*
 
 **Create a free Seven Bridges account here:**  
 [https://accounts.sb.biodatacatalyst.nhlbi.nih.gov/auth/login](https://accounts.sb.biodatacatalyst.nhlbi.nih.gov/auth/login)
