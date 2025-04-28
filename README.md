@@ -111,6 +111,7 @@ Researchers can **run the entire WGS2IBI workflow end-to-end** using this sample
 ```bash
 git clone https://github.com/your-repo-name
 cd your-repo-name
+```
 
 ---
 
