@@ -27,8 +27,8 @@ Designed for datasets such as the **TOPMed Freeze 8 and Freeze 9 cohorts**, this
 3. **`cwl/population_analysis.cwl`**: Executes GWAS-level analysis for population-wide insights.
 
 ### Scripts
+- **`scripts/initial_analysis.py`**: Performs initial analysis on the results of the population-level analysis to determine k and prepare the file that contain ranks which is used for extracting the top k variants pool. 
 - **`scripts/Confirm_topk_pool.py`**: Manages top-k variant selection for refined genetic analysis.  
-- **`scripts/IBI_pool.py`**: Performs pooled IBI analysis across all chromosomes.  
 
 ---
 
