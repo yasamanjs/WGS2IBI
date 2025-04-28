@@ -24,7 +24,7 @@ The workflow has been tested on large datasets, such as the **TOPMed Freeze 8 an
 
 ## Workflow Components
 - **Preprocessing Tool**:  
-  `cwl/preprocessing.cwl` — Processes raw WGS VCF files using VCF2SNP, PLINK, and BCFtools.
+  `cwl/preprocessing.cwl` — VCF2SNP tool Processes raw WGS VCF files using BCFtools, PLINK, and Numpy.
 - **Population-Level Analysis Tools**:  
   `cwl/population_analysis_fisher.cwl` — Conducts Fisher's exact test for GWAS.  
   `cwl/population_analysis_gdsearch.cwl` — Conducts GDSearch for GWAS.
