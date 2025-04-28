@@ -124,7 +124,7 @@ cd your-repo-name
 
 ## Citation
 If you use this workflow in your research, please cite:  
-[Pending Publicatio]  
+[Pending Publication]  
 by Yasaman J. Soofi, Jin Ren, Md. Asad Rahman, David Roberson, and Jinling Liu.
 
 ---
