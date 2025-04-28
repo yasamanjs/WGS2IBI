@@ -1,9 +1,10 @@
 # WGS2IBI: A Cloud-Based Modular Workflow for Streamlined Individualized Bayesian WGS Data Analysis
 
 ## Overview
-This repository contains the CWL code and resources for a cloud-based, modular workflow designed to optimize the **Individualized Bayesian Inference (IBI)** approach for **genome-wide association studies (GWAS)** using **Whole Genome Sequencing (WGS)** data. The workflow emphasizes **efficiency**, **scalability**, and **reproducibility**, making IBI more accessible to genomic researchers.  
+This repository provides the CWL code, Docker containers, and scripts for **WGS2IBI** — a **cloud-based, modular workflow** that streamlines **Individualized Bayesian Inference (IBI)** for **whole genome sequencing (WGS)** data analysis.  
 
-Designed for datasets such as the **TOPMed Freeze 8 and Freeze 9 cohorts**, this pipeline handles large-scale genomic data, preprocessing variants from **102M to 18M** while ensuring computational and cost efficiency.  
+Optimized for scalability, reproducibility, and cost-efficiency, WGS2IBI enables both population-level and individual-level genomic discovery.  
+The workflow has been tested on large datasets, such as the **TOPMed Freeze 8 and Freeze 9 cohorts**.
 
 [Read the full study (link pending publication)]  
 
@@ -11,58 +12,71 @@ Designed for datasets such as the **TOPMed Freeze 8 and Freeze 9 cohorts**, this
 
 ---
 
-## Features  
-- **Scalability**: Handles large datasets with millions of variants across thousands of participants.  
-- **Cost Efficiency**: Dynamically optimized AWS instance selection reduces preprocessing costs to **$20.83 per cohort** and individual-level analysis costs to **under $5**.  
-- **Memory Optimization**: Utilizes numpy arrays for efficient storage and faster computation, reducing RAM usage significantly.  
-- **Reproducibility**: Implements CWL and Docker for consistent workflows across diverse environments.  
-- **Compatibility**: Compatible with public datasets, including **MESA**, **JHS**, **FHS**, **GENOA**, and **WHI**.  
+## Key Features  
+- **Scalability**: Supports large cohorts (thousands of participants, >100M variants).  
+- **Cost Efficiency**: Preprocessing and IBI analysis can be completed for under **$25 per cohort** on AWS.  
+- **Cloud Readiness**: Deployable on cloud platforms (AWS, Seven Bridges) or local HPC clusters.  
+- **Reproducibility**: Fully containerized with Docker and standardized using CWL.  
+- **Memory Optimization**: Uses numpy arrays and dynamic batching to minimize RAM usage.  
+- **Population and Individual Analysis**: Integrates GWAS (Fisher test, GDSearch) and IBI for comprehensive insights.  
 
 ---
 
-## Code Files  
-### Workflow Components
-1. **`cwl/preprocessing.cwl`**: Automates data preprocessing using VCF2SNP, PLINK, and BCFtools.  
-2. **`cwl/individual_analysis.cwl`**: Conducts IBI-based individual-level analyses with dynamic batching.  
-3. **`cwl/population_analysis.cwl`**: Executes GWAS-level analysis for population-wide insights.
-
-### Scripts
-- **`scripts/initial_analysis.py`**: Performs initial analysis on the results of the population-level analysis to determine k and prepare the file that contain ranks which is used for extracting the top k variants pool. 
-- **`scripts/Confirm_topk_pool.py`**: Manages top-k variant selection for refined genetic analysis.  
-
----
-
-## Performance Highlights  
-- Preprocessed **102M variants to 18M** with optimized workflows, reducing computational burden.  
-- Achieved **4x faster processing times** by leveraging parallel computing on HPC clusters and AWS.  
-- Fine-tuned workflows for cost efficiency, achieving preprocessing costs of **$20.83 per cohort** and individual-level analysis costs of **under $5**.  
-- Demonstrated scalability with large datasets from cohorts like JHS (2,777 samples) and WHI (11,054 samples).  
+## Workflow Components
+- **Preprocessing Tool**:  
+  `cwl/preprocessing.cwl` — Processes raw WGS VCF files using VCF2SNP, PLINK, and BCFtools.
+- **Population Analysis Tools**:  
+  `cwl/population_analysis.cwl` — Conducts Fisher's exact test and GDSearch for GWAS.
+- **Top-k Pool Extraction Scripts**:  
+  `scripts/initial_analysis.py`, `scripts/Confirm_topk_pool.py` — Selects top-ranked variants for downstream analysis.
+- **Individual-Level Analysis Tool**:  
+  `cwl/individual_analysis.cwl` — Performs IBI on top-k selected variants.
 
 ---
 
-## Technologies Used  
-- **Workflow Language**: CWL  
-- **Containerization**: Docker  
-- **Cloud Computing**: AWS, Seven Bridges  
-- **Programming**: Python (pandas, numpy, custom scripts)  
-- **Data Processing Tools**: PLINK, BCFtools, VCF2SNP  
-- **Optimization Techniques**: GPU acceleration (CUDA), parallel processing  
+## Performance Summary
+- Reduced preprocessing time and costs by dynamically optimizing cloud resources.
+- Achieved preprocessing costs of **$20.83** and individual-level analysis costs of **under $5** for cohorts like JHS (2,777 samples).
+- Demonstrated scalability across datasets such as JHS, WHI, MESA, FHS, and GENOA.
 
 ---
 
-## Getting Started  
-### Prerequisites  
-1. **Docker**: Install Docker to run containerized workflows.  
-2. **CWL Runner**: Use a compatible runner like `cwltool`.  
-3. **AWS Account**: Set up AWS for scalable and cost-efficient analysis.  
+## Access Options
 
-### Steps to Run the Workflow  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-repo-name
-   cd your-repo-name
-2. Review setup instructions in the `/docs` directory.
-3. Run preprocessing workflows in the `/cwl` directory with sample data from `/data`.
+### 1. GitHub Repository (Current Page)
+The full workflow source code, CWL files, and example scripts are provided here for researchers who wish to set up the workflow manually.  
+See the **Getting Started** section below for setup instructions.
+
+### 2. Public Project on Seven Bridges (Recommended for Testing)
+A public project hosting **WGS2IBI** is available on the Seven Bridges platform.  
+This provides the easiest way to run the workflow **without any installation**.  
+
+**Advantages:**
+- Fully set up and ready to use — no need to install CWL runners, Docker, or manage AWS instances.
+- Test anonymously: Seven Bridges agreed to support reviewer access without needing personal disclosure.
+- Free trial credits available:  
+  Simply email **support@sevenbridges.com** with the subject "Request for Trial Access to WGS2IBI Project."
+
+**Instructions:**
+- Visit Seven Bridges platform.
+- Copy the public WGS2IBI project into your workspace.
+- Test with provided sample data or upload your own data.
+
+> Detailed instructions for accessing and using the Seven Bridges project are also provided in the [docs/sevenbridges_usage.md](docs/sevenbridges_usage.md) file.
+
+---
+
+## Getting Started (Manual Setup)
+
+### Prerequisites
+- **Docker** (for running containerized environments)
+- **CWL Runner** (e.g., `cwltool`)
+- **AWS account** (for cloud deployment) — optional if running locally
+
+### Quick Start
+```bash
+git clone https://github.com/your-repo-name
+cd your-repo-name
 
 ---
 
