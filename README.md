@@ -1,5 +1,4 @@
-# Cloud-Based Modular Workflow for Individualized Bayesian Genomic Analysis  
-**An Efficient Approach for Preprocessing and Association Studies of Whole Genome Sequences**  
+# WGS2IBI: A Cloud-Based Modular Workflow for Streamlined Individualized Bayesian WGS Data Analysis
 
 ## Overview
 This repository contains the CWL code and resources for a cloud-based, modular workflow designed to optimize the **Individualized Bayesian Inference (IBI)** approach for **genome-wide association studies (GWAS)** using **Whole Genome Sequencing (WGS)** data. The workflow emphasizes **efficiency**, **scalability**, and **reproducibility**, making IBI more accessible to genomic researchers.  
