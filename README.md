@@ -84,4 +84,5 @@ by **Yasaman J. Soofi, Jin Ren, Md. Asad Rahman, David Roberson, and Jinling Liu
 This project is licensed under the MIT License.
 You are free to use, modify, and distribute this software under the terms of the license.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+🔒 **Note:** This software is intended for academic and non-commercial research purposes. Commercial use requires prior written permission from the authors.
 
