@@ -75,7 +75,7 @@ Designed for datasets such as the **TOPMed Freeze 8 and Freeze 9 cohorts**, this
 
 ## Citation
 If you use this workflow in your research, please cite:  
-**"Cloud-Based Modular Workflow for Individualized Bayesian Genomic Analysis"**  
+[Pending Publicatio]  
 by **Yasaman J. Soofi, Jin Ren, Md. Asad Rahman, David Roberson, and Jinling Liu.**
 
 ---
