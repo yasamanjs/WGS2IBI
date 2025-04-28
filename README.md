@@ -62,7 +62,7 @@ A public project hosting **WGS2IBI** is available on the Seven Bridges platform.
 This provides the easiest way to run the workflow **without any installation**.  
 
 **Access the public project here:**  
-[https://sb.biodatacatalyst.nhlbi.nih.gov/projects/f8e1d6a6-6f2e-4fa7-aaa3-d63d663ef9e5/WGS2IBI](https://sb.biodatacatalyst.nhlbi.nih.gov/projects/f8e1d6a6-6f2e-4fa7-aaa3-d63d663ef9e5/WGS2IBI)  
+[https://sb.biodatacatalyst.nhlbi.nih.gov/projects/f8e1d6a6-6f2e-4fa7-aaa3-d63d663ef9e5/WGS2IBI](https://platform.sb.biodatacatalyst.nhlbi.nih.gov/u/biodatacatalyst/WGS2IBI)  
 *(Example URL — replace with your actual project link if different.)*
 
 **Create a free Seven Bridges account here:**  
