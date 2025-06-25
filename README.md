@@ -76,6 +76,8 @@ This provides the easiest way to run the workflow **without any installation**.
 - A **sample dataset** from the **1000 Genomes Project benchmark data** is included in the public project for immediate testing.
 - Free trial credits available: Simply email **support@sevenbridges.com** with the subject "Request for Trial Access to WGS2IBI Project."
 
+![image](https://github.com/user-attachments/assets/b336585e-9499-443d-a8cb-2fccc6935ffd)
+
 
 ---
 
