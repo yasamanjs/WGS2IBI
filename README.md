@@ -67,14 +67,13 @@ This provides the easiest way to run the workflow **without any installation**.
 
 **Create a free Seven Bridges account here:**  
 [https://accounts.sb.biodatacatalyst.nhlbi.nih.gov/auth/login](https://accounts.sb.biodatacatalyst.nhlbi.nih.gov/auth/login)
-
+Need free trial credits? Email 𝘴𝘶𝘱𝘱𝘰𝘳𝘵@𝘴𝘦𝘷𝘦𝘯𝘣𝘳𝘪𝘥𝘨𝘦𝘴.𝘤𝘰𝘮 with subject: Request for Trial Access to WGS2IBI Project
 
 **Advantages:**
 - Fully set up and ready to use — no need to install CWL runners, Docker, or manage AWS instances.
 - After creating a Seven Bridges account, users can **anonymously copy and test** the public WGS2IBI project without needing to contact the authors.
 - Users can **review previously submitted jobs**, including job inputs, parameters, outputs, and runtime settings — making it easy to learn how the workflow operates.
 - A **sample dataset** from the **1000 Genomes Project benchmark data** is included in the public project for immediate testing.
-- Free trial credits available: Simply email **support@sevenbridges.com** with the subject "Request for Trial Access to WGS2IBI Project."
 
 ![image](https://github.com/user-attachments/assets/b336585e-9499-443d-a8cb-2fccc6935ffd)
 
