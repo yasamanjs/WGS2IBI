@@ -6,16 +6,9 @@ This repository provides the CWL code, Docker containers, and scripts for **WGS2
 Optimized for scalability, reproducibility, and cost-efficiency, WGS2IBI enables both population-level and individual-level genomic discovery.  
 The workflow has been tested on large datasets, such as the **TOPMed Freeze 8 and Freeze 9 cohorts**.
 
-[Read the full study (link pending publication)]  
+[Read the full study (pending publication)]  
 
 
-
-
-![Workflow Overview](https://github.com/user-attachments/assets/26c19d09-ae10-44e0-a802-77193d927d67)
-> **Figure:** Visual representation of the WGS2IBI workflow, illustrating the modular tools and the flow of inputs and outputs.  
-> *(Image reproduced from the manuscript pending publication.)*
->
-> 
 ---
 
 ## Key Features  
